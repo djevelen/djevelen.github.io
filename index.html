@@ -126,6 +126,232 @@
     
     
     <article
+  id="post-大话数据结构笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/05/22/%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/"
+    >大话数据结构笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2026/05/22/%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2026-05-21T16:00:00.000Z" itemprop="datePublished">2026-05-22</time>
+</a>
+      
+      
+        
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+
+      
+        <h1 id="大话数据结构笔记"><a href="#大话数据结构笔记" class="headerlink" title="大话数据结构笔记"></a>大话数据结构笔记</h1><h2 id="chapter-1-什么是数据结构"><a href="#chapter-1-什么是数据结构" class="headerlink" title="chapter 1:什么是数据结构"></a>chapter 1:什么是数据结构</h2><details>
+<summary> 对于基本概念十分了解的朋友建议直接跳到<a href="#zdlx">抽象数据类型</a>那里,把基本的格式看一下就可以进入下一篇blog了.对基本概念还不是很了解的朋友建议耐心看完哦~<br><br>
+</summary>
+
+<p> <em><strong>数据结构是一门研究非数值计算的程序设计问题中的操作对象,以及它们之间关系和操作等的学科</strong></em></p>
+<ul>
+<li>数据:描述客观事物的符号,是计算机中可以操作的对象;</li>
+<li>数据元素:组成数据的、有一定意义的基本单位.(可以将数据理解为一个集合);</li>
+<li>数据项:数据不可再分的最小单位.但实际讨论问题时,&#x3D;&#x3D;数据元素&#x3D;&#x3D;才是构建数据模型的着眼点</li>
+<li>结构:元素之间不是独立的,我们把它们之间的关系就叫做结构.</li>
+</ul>
+<p><em><strong>数据结构又可分为逻辑结构和物理结构</strong></em></p>
+<ul>
+<li><p>逻辑结构:日常中理解的结构,侧重于描述元素之间的关系.它细分为:</p>
+<ol>
+<li>集合结构(数据元素是平等且&#x3D;&#x3D;无序&#x3D;&#x3D;的);</li>
+<li>线性结构(数据元素一对一);</li>
+<li>树形结构(数据元素有一对多);</li>
+<li>图形结构(数据元素有多对多).</li>
+</ol>
+</li>
+<li><p>物理结构:数据的逻辑结构在计算机中的储存形式.它细分为:</p>
+<ol>
+<li>顺序存储:元素存储在连续的的内存空间中,&#x3D;&#x3D;储存关系可以反映逻辑关系&#x3D;&#x3D;;</li>
+<li>链式存储:元素随意存储在内存空间中(可以连续也可以不连续),&#x3D;&#x3D;位置关系不能反映逻辑关系,必须引入指针&#x3D;&#x3D;.</li>
+</ol>
+</li>
+</ul>
+<p><em><strong>抽象数据类型</strong></em><a id="zdlx"></a> :</p>
+<p>一个具体的数学模型和对应的操作.我们完全可以从实际问题出发,做出最简单的归纳,&#x3D;&#x3D;而不用先去考虑如何用计算机去实现&#x3D;&#x3D;(实际上就算是从抽象的本质).这是一个很小却很重要的的点.</p>
+<p>以下是抽象数据类型的一个实例:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">Data </span><br><span class="line">    数据元素之间逻辑关系的定义</span><br><span class="line">Operatinon</span><br><span class="line">    操作1</span><br><span class="line">    初始条件</span><br><span class="line">    操作结果描述</span><br><span class="line">    操作2</span><br><span class="line">    ……</span><br><span class="line">    操作n</span><br><span class="line">    ……</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+
+
+
+<p>PS:以上笔记或多或少和原书有所出入:一是在数据的分类中,封老师在是数据之下又细分了数据对象,数据对象下面才是数据元素;其次我省略了原子类型和结构类型的概念,由于我此时已经学过C语言,完全可以用C语言里的基本类型和复合类型来进行类比(<del><em><strong>只是懒得打字和解释新名词</strong></em></del>),但实际上封老师提出的两个名词更泛概括性更强,在其他语言里同样适用,这点无疑是不可否认的,所以麻烦想知道概念的朋友问问AI或是移步原文啦~</p>
+<p><a target="_blank" rel="noopener" href="https://z-library.im/s/%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">zlibrary.大话数据结构</a></p>
+</details>
+
+<h2 id="chapter-2-算法"><a href="#chapter-2-算法" class="headerlink" title="chapter 2: 算法"></a>chapter 2: 算法</h2><details>
+<summary>这同样是一篇基础却关键的文章.假如你对此非常熟悉或是正在期末周补课,你可以直接跳到后面;但是对于时间充裕或者是期待发现新知的朋友,建议还是耐心看完这篇介绍吧~<br>
+
+<blockquote>
+<p>Stay hungry, stay foolish. ——Jobs.</p>
+</blockquote>
+ </summary><br>
+
+<p><em><strong>前言</strong></em>(<del>牢骚</del>)</p>
+<ul>
+<li>实际上最开始学数据结构时我也不理解为什么要引入算法,甚至得出了学校数据结构课像杂种的结论.但现在来看想要搞清楚数据结构的几种类型确实很容易,但是想要真正理解它们的用处是&#x3D;&#x3D;离不开算法&#x3D;&#x3D;的.<strong>算法也许才是数据结构的精髓和难点</strong>.所以请对此不熟悉的朋友们耐心读完这一篇文章,希望你会有所收获.</li>
+</ul>
+<p><em><strong>算法是解决具体问题的求解步骤,在计算机中表现为指令的有限序列</strong></em></p>
+<ul>
+<li>算法的五个特性:<ol>
+<li>输入和输出;</li>
+<li>有穷性(&#x3D;&#x3D;有限&#x3D;&#x3D;步骤里完成);</li>
+<li>确定性(每个步骤不会产生二义性);</li>
+<li>可行性(也许可以粗鄙地理解为正确性,前者针对&#x3D;&#x3D;过程&#x3D;&#x3D;,后者针对&#x3D;&#x3D;结果&#x3D;&#x3D;);</li>
+</ol>
+</li>
+<li>算法效率的度量方法:事后统计法(顾名思义就是在计算机上老老实实跑一遍代码)和事前分析估算法(喜闻乐见的时间复杂度和空间复杂度);</li>
+<li>函数的渐进增长:对于函数$f(n)$和$g(n)$,很难笼统地说哪个的值一定更大,n在不同范围时结果一般不同(求临界值解个不等式就行了).然而当n足够大时,两个函数谁更大确实确定的,我们说更大的函数渐进增长更快.<ul>
+<li>实际上就是<strong>无穷大量比阶</strong>的问题(n取正数且足够大),我们完全可以忽略常数,不论它是单独的一项还是系数,因为不影响最终结果(同阶除外).&#x3D;&#x3D;这也是时间复杂度化简的理论基础&#x3D;&#x3D;.</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>时间复杂度的求解本质就是计算目标代码所有语句执行次数总和的最高阶</strong></em></p>
+<p>&#x3D;&#x3D;说明&#x3D;&#x3D;:尽管封老师在原文直接给出求时间复杂度的固定模板,你仍然需要理解上面这句话.实际上,,如果没能对时间复杂度有基本的了解,很多时候未必能正确套用模板;相反地,只要你掌握原理,模板什么的就不是刚需了.(tips:时间复杂度中表示方式O是&#x3D;&#x3D;大写&#x3D;&#x3D;)</p>
+<ul>
+<li>以下是一道简单却经典例子:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int i, j;</span><br><span class="line">for(i = 0; i &lt; n; i++)&#123;</span><br><span class="line">  for(j = i; j &lt; n; j++)&#123;</span><br><span class="line">    //时间复杂度为O(1)的步骤</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>下面让我们一步步求解,不依靠任何模板,只靠对本质的理解:</p>
+<ul>
+<li><p>定义语句执行一次;</p>
+</li>
+<li><p>注意&#x3D;&#x3D;两层循环是一个整体&#x3D;&#x3D;,所谓用外层循环次数与内层循环次数相乘只是乘法原理的应用,实际上我们应该关注的是&#x3D;&#x3D;内层循环&#x3D;&#x3D;执行了多少次;</p>
+<p>当i从0取到n-1时,内层循环的执行次数依次为:</p>
+<table>
+<thead>
+<tr>
+<th align="center">i</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">……</th>
+<th align="center">n-1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">j</td>
+<td align="center">n</td>
+<td align="center">n-1</td>
+<td align="center">n-2</td>
+<td align="center">……</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<p>计算得内层循环执行次数: $\frac {n(n+1)}{2}$;</p>
+</li>
+<li><p>内层循环中语句的时间复杂度为$O(1)$,执行次数记为常数$\rm C$;</p>
+</li>
+<li><p>最后总次数:$f(n) &#x3D; 1 + \frac {n(n+1)}{2} + \rm C$.由上面阶数化简可知,其最高阶应为 $\rm n^2$,故其时间复杂度记为$O(\rm n^2)$.</p>
+</li>
+<li><p>以上就是大致推导过程,下面封老师总结的求解模板不在此给出,还麻烦感兴趣的朋友移步原文.(<em><strong><del>懒癌再犯</del></strong></em>)</p>
+</li>
+</ul>
+</li>
+<li><p>常见的时间复杂度所耗费的大小关系:</p>
+<p>$O(1) &lt; O(logn)&lt;O(n)&lt;O(nlogn)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)$</p>
+</li>
+<li><p>最坏情况:对于n个元素,最后一次(花了n次)才找到目标对象.最坏情况运行时间是一种&#x3D;&#x3D;保障&#x3D;&#x3D;.<strong>除非特定规定,不然一般提到的运行时间都是最坏情况运行时间</strong>.</p>
+</li>
+<li><p>平均情况:对于n个元素,花了$\dfrac {\rm n}{2}$次就找到了目标对象.平均运行时间是所有情况中&#x3D;&#x3D;最有意义&#x3D;&#x3D;的,因为它是<strong>期望的运行时间</strong>.</p>
+</li>
+</ul>
+<p><em><strong>用空间换时间</strong></em></p>
+<ul>
+<li>空间复杂度:通过计算算法所需要的存储空间实现,其计算公式记作:$S(n) &#x3D; O(f(n))$,n为问题的规模,$f(n)$是问题所占据存储空间的函数.</li>
+<li>若算法执行时所需要的辅助空间相对于输入数据量而言是个常量,则称此算法为&#x3D;&#x3D;原地工作&#x3D;&#x3D;,空间复杂度为**$O(1)$**.</li>
+<li>复杂度前无限定词时,默认指&#x3D;&#x3D;时间复杂度&#x3D;&#x3D;.</li>
+</ul>
+<p>PS:又到了令人愉快的总结时间.还是那句话:以上笔记或多或少和原书有所出入,希望朋友们理解.这篇文章未能提出<strong>算法的设计要求</strong>这一概念,自然也无法强调它和算法特性的区别(很遗憾,这似乎还是个&#x3D;&#x3D;易错点&#x3D;&#x3D;,但与其发牢骚,不如动动手指点点<a target="_blank" rel="noopener" href="https://z-library.im/s/%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">zlibrary.大话数据结构</a>,毕竟自己动手丰衣足食~);其次就是排版问题,时间复杂度表达式O(n)的形式我未能保持统一,如果每次都用<strong>LaTeX</strong>格式就太麻烦了,还请各位多多谅解.</p>
+</details>
+
+
+
+<h2 id="chapter-3-线性表"><a href="#chapter-3-线性表" class="headerlink" title="chapter 3:线性表"></a>chapter 3:线性表</h2><details><summaries>
+    </summaries>
+</details>
+
+<p><em><strong>线性表是零个或多个数据元素的有限序列</strong></em></p>
+<ul>
+<li><p>线性表的数学定义:若将线性表记作$(a_1,……a_i-1,a_i,a_i+1……,a_n)$,则表中$a_i-1$领先于$a_i$,$a_i$领先于$a_i+1$,则称$a_i-1$是$a_i$的直接前驱元素,$a_i+1$是$a_i$的直接后继元素.除了&#x3D;&#x3D;表头和表尾&#x3D;&#x3D;,线性表中其他元素均&#x3D;&#x3D;只有一个&#x3D;&#x3D;前驱和后继元素.</p>
+</li>
+<li><p>线性表元素的个数$\rm n$定义为线性表的长度.$\rm n$为$0$时,称为空表.</p>
+</li>
+<li><p>线性表有&#x3D;&#x3D;顺序&#x3D;&#x3D;,强调&#x3D;&#x3D;一一对应&#x3D;&#x3D;,元素&#x3D;&#x3D;有限&#x3D;&#x3D;</p>
+</li>
+<li><p>线性表的抽象数据类型如下:</p>
+</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ADT 线性表</span><br><span class="line">Data </span><br><span class="line">	一组数据元素满足线性结构.</span><br><span class="line">	其一对一的具体形式为:</span><br><span class="line">		除了第一个元素,所有元素都有唯一的前驱元素;除了最后一个元素,所有元素都有唯一的后继元素.</span><br><span class="line">Operation</span><br><span class="line">	InitList(*L);	初始化,建立一个空的线性表L.</span><br><span class="line">	ListEmpty(*L);	判断线性表是否为空.</span><br><span class="line">	ClearList(*L);	清空线性表.</span><br><span class="line">	GetElem(*L, i, *e);	将线性表L中第i个位置元素返回给e.</span><br><span class="line">	LocateElem(*L, e);	在线性表中查找与e相等的元素.查找成功返回元素在表中的序列号,否则返回0.</span><br><span class="line">	ListInsert(*L, i, e);	在线性表L中第i个位置插入元素e.</span><br><span class="line">	ListDelete(*L, i, *e);	删除线性表L第i个元素,并用e返回其值.</span><br><span class="line">	ListLenth(*L);	返回线性表l元素个数.</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+
+<p>​	&#x3D;&#x3D;注意&#x3D;&#x3D;:</p>
+<ol>
+<li>对应不同的应用,线性表的基本操作是不一样的.上述操作是最基本的,对于实际问题中设计的关于线性表的更复杂操作,完全可以用这些基本操作的组合来实现;</li>
+<li>元素在线性表中的序列号,这里默认是从$0$开始的;</li>
+<li>部分函数传参类型和原文不一致.一般来说只有需要改变原变量的值时才需要传地址.但是这样一来传参类型复杂了不好记;其次传地址只需要$8$个字节,总体上所需空间更小.</li>
+</ol>
+<ul>
+<li>以下是一个实例,要求实现两个线性表集合$\rm A$和$\rm B$的并集操作,即要使$\rm A &#x3D; A \cup B$.</li>
+</ul>
+
+      
+
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+
+  
+
+  <!-- [2026-03] 评论系统已从 Gitalk/Twikoo 迁移至 giscus，详见 doc/audit-report.md #1 #9 -->
+
+  
+</article>
+
+    
+    <article
   id="post-php初级漏洞"
   class="article article-type-post"
   itemscope

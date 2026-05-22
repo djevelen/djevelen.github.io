@@ -180,5 +180,8 @@
 </ul>
 <h2 id="php类型转化"><a href="#php类型转化" class="headerlink" title="php类型转化"></a>php类型转化</h2><p><strong>在 PHP 中类型转换有一定的缺陷，如果一个 字符串 要转成数值类型，首先对字符串进行一个判断，如果字符串包含 e 、. 、E 则会作为 float 来取值，否则则为 int ，上述例子由于 a 没有包含任何东西，所以被当作 int 来处理了，这里要说明的是，如果字符串起始部分为 数值 ，则采用 起始的数值 ，否则一律为 0</strong></p>
 <h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">if(&quot;admin&quot;===$_GET[id]) </span><br><span class="line">//注意到这里是强比较,不仅比较值,而且比较类型</span><br><span class="line">&#123;</span><br><span class="line">  echo(&quot;&lt;p&gt;not allowed!&lt;/p&gt;&quot;);</span><br><span class="line">  exit();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$_GET[id] = urldecode($_GET[id]);</span><br><span class="line">if($_GET[id] == &quot;admin&quot;)</span><br><span class="line">&#123;</span><br><span class="line">  echo &quot;&lt;p&gt;Access granted!&lt;/p&gt;&quot;;</span><br><span class="line">  echo &quot;&lt;p&gt;Key: xxxxxxx &lt;/p&gt;&quot;;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">把 admin 给 URL 编码一下即可:</span><br><span class="line">admin-&gt;%61%64%6d%69%6e</span><br><span class="line"></span><br><span class="line">但是发现传进去的值会直接给 urldecode(php会自动解码一次)，为此再把编码后的 admin 再编码一遍:</span><br><span class="line">%61%64%6d%69%6e-&gt;%25%36%31%25%36%34%25%36%64%25%36%39%25%36%65</span><br><span class="line"></span><br><span class="line">传参拿 Flag</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>php</tag>
+      </tags>
   </entry>
 </search>

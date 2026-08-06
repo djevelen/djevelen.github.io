@@ -13,8 +13,9 @@
 
 .article-entry .lede {
   margin: 0 0 1.4rem;
-  font-size: 1.05rem;
-  color: #777;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
 }
 
 .article-entry .goal,

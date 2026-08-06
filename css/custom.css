@@ -1,0 +1,155 @@
+/* ============================================================
+   文章排版增强(参考 lesson 页面风格)
+   仅作用于 .article-entry 内的指定 class,不影响其他页面
+   ============================================================ */
+
+.article-entry .kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent, #49b1f5);
+}
+
+.article-entry .lede {
+  margin: 0 0 1.4rem;
+  font-size: 1.05rem;
+  color: #777;
+}
+
+.article-entry .goal,
+.article-entry .note,
+.article-entry .task,
+.article-entry .next,
+.article-entry .quiz,
+.article-entry .sample,
+.article-entry .flag-checker {
+  margin: 1.3rem 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+}
+
+.article-entry .goal {
+  background: #eef6fc;
+  border: 1px solid #cfe5f5;
+  border-left: 4px solid var(--accent, #49b1f5);
+}
+
+.article-entry .goal strong {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.article-entry .goal ul {
+  margin: 0.4rem 0 0;
+}
+
+.article-entry .note {
+  background: #f3f4fa;
+  border: 1px solid #d7dae8;
+  border-left: 4px solid #8f9bc0;
+}
+
+.article-entry .task {
+  background: #eef4ee;
+  border: 1px dashed #9db8a0;
+}
+
+.article-entry .next {
+  background: #fdf6ec;
+  border: 1px solid #ecdcc4;
+  border-left: 4px solid #d9a95c;
+}
+
+.article-entry .cite {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.article-entry .sample {
+  background: #f8f6f1;
+  border: 1px solid #e5dfd3;
+}
+
+.article-entry .sample-label {
+  margin: 0 0 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.article-entry .sample pre {
+  margin: 0 0 0.7rem;
+}
+
+.article-entry .quiz {
+  background: #fff;
+  border: 1px solid #e5dfd3;
+}
+
+.article-entry .quiz .q {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.article-entry .opt {
+  display: block;
+  width: 100%;
+  margin: 0.45rem 0;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #e5dfd3;
+  border-radius: 8px;
+  background: #fbfaf7;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.article-entry .opt:hover:not(:disabled) {
+  border-color: var(--accent, #49b1f5);
+  background: #f0f8ff;
+}
+
+.article-entry .opt.correct {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.article-entry .opt.wrong {
+  border-color: #b3261e;
+  background: #fdecea;
+  color: #b3261e;
+  text-decoration: line-through;
+}
+
+.article-entry .opt:disabled {
+  cursor: default;
+}
+
+.article-entry .feedback {
+  margin: 0.7rem 0 0;
+  font-size: 0.95rem;
+}
+
+.article-entry .explain {
+  color: #2e7d32;
+}
+
+.article-entry .hint {
+  color: #999;
+  font-style: italic;
+}
+
+.article-entry .flag-checker {
+  background: #f8f6f1;
+  border: 1px solid #e5dfd3;
+  border-left: 4px solid var(--accent, #49b1f5);
+}
+
+.article-entry .flag-checker p:first-child {
+  margin-top: 0;
+}

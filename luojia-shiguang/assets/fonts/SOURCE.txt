@@ -1,0 +1,7 @@
+Outfit variable font, weights 100–900:
+https://github.com/google/fonts/tree/main/ofl/outfit
+Plus Jakarta Sans variable font, weights 200–800:
+https://github.com/google/fonts/tree/main/ofl/plusjakartasans
+Downloaded from the Google Fonts repository. License texts are bundled alongside both fonts.
+UI uses Outfit 600–700 for headings and Plus Jakarta Sans 400–500 for body text.
+These fonts do not supply Chinese glyphs; CSS falls back to installed Chinese sans-serif fonts.

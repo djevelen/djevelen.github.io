@@ -1,0 +1,7 @@
+GSAP 3.15.1
+Retrieved 2026-11-04 from official GreenSock repository:
+https://raw.githubusercontent.com/greensock/GSAP/master/dist/gsap.min.js
+The original copyright and license header is retained in gsap.min.js.
+License terms: https://gsap.com/standard-license/
+Documentation consulted: https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/
+Local copy enables offline gameplay. No runtime CDN requests are required.

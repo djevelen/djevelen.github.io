@@ -3,7 +3,7 @@
  const fx=window.GameMotion;
  const $ = id => document.getElementById(id), bank = window.QUESTION_BANK;
  const ROUND_SIZE = 5, POINTS = 20, rules=window.MAP_RULES;
- const scoreTitles={0:'熟悉的陌生人',20:'初识校园',40:'渐入佳境',60:'校园熟面孔',80:'武大活地图',100:'老珈人'};
+ const scoreTitles={0:'华科来的奸细',20:'初识校园',40:'渐入佳境',60:'校园熟面孔',80:'武大活地图',100:'老珈人'};
  let round=[], index=0, answers=[], selection=null, phase='welcome', zoom=1;
  let keyboardPoint={x:570,y:422}, best=0;
  try { best=Number(localStorage.getItem('luojia-best-150m'))||0; } catch {}
